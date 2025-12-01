@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "關於我",
+    "projects": "專案",
+    "services": "服務",
+    "contact": "聯絡我",
+    "blog": "部落格"
+  },
+  "home": {
+    "hero": {
+      "title": "你好，我是Ken 一位前端開發者",
+      "description": "擅長前端網頁製作，以及極簡與便當盒風格",
+      "cta": "查看我的個人檔案"
+    },
+    "stats": {
+      "experience": "工作經驗",
+      "years": "1+ 年",
+      "location": "所在地",
+      "city": "台北，台灣",
+      "available": "目前狀態",
+      "status": "開放接案中"
+    },
+    "social": {
+      "title": "社交軟體"
+    },
+    "skills": {
+      "title": "核心技能",
+      "elseTitle": "其他技能"
+    },
+    "github": {
+      "title": "GitHub 貢獻紀錄"
+    },
+    "traffic": {
+      "title": "網站訪客數",
+      "days": "過去 7 天趨勢"
+    },
+    "latestPost": {
+      "title": "最新文章"
+    },
+    "resetPosition": "重置位置"
+  },
+  "about": {
+    "title": "關於我",
+    "bio": {
+      "h1": "大家好我是 Ken 也可以叫我 Kakeru",
+      "p1": "我是一位獨立開發者，看到有趣的東西就會忍不住去玩玩看，也喜歡研究一些新的技術，資訊工程學系畢業，擁有1年的開發經驗，不管是網頁還是AI皆有涉略。",
+      "p2": "前端的部分擅長使用React、JavaScript、HTML、CSS、Tailwind CSS、Git、GitHub、Japanese、Project Management等技術去建置網站。",
+      "p3": "後端的部分擅長使用Node.js、Express、PostgreSQL等技術去建置後端Server。",
+      "p4": "網站伺服器推薦使用Zeabur，台灣的新創品牌。"
+
+    },
+    "philosophy": {
+      "title": "設計哲學",
+      "quote": "「簡約是最終極的複雜。」"
+    },
+    "education": {
+      "title": "學歷",
+      "degree": "資訊工程學系",
+      "university": "中國文化大學, 2024"
+    },
+    "experience": {
+      "title": "工作經歷",
+      "position": "前端開發工程師",
+      "company": "自由接案 / Freelancer",
+      "period": "2025 - 至今"
+    }
+  },
+  "projects": {
+    "title": "精選專案",
+    "items": {
+      "ecommerce": {
+        "title": "電子商務平台",
+        "desc": "具有流暢結帳體驗的現代化購物網站",
+        "category": "網頁開發"
+      },
+      "designSystem": {
+        "title": "設計系統",
+        "desc": "企業級的完整元件庫",
+        "category": "UI/UX"
+      },
+      "mobileApp": {
+        "title": "行動應用程式",
+        "desc": "提升生產力的跨平台應用程式",
+        "category": "行動開發"
+      },
+      "portfolio": {
+        "title": "作品集網站",
+        "desc": "為創意代理商設計的簡約風格作品集",
+        "category": "網頁設計"
+      },
+      "dashboard": {
+        "title": "數據分析儀表板",
+        "desc": "即時數據視覺化平台",
+        "category": "網頁開發"
+      },
+      "branding": {
+        "title": "品牌識別",
+        "desc": "科技新創公司的完整品牌設計",
+        "category": "品牌設計"
+      }
+    }
+  },
+  "services": {
+    "title": "服務項目",
+    "webDev": {
+      "title": "網頁開發",
+      "desc": "使用現代技術打造的客製化網站與應用程式",
+      "features": ["React & Next.js", "RWD 響應式設計"]
+    },
+    "uiux": {
+      "title": "技術諮詢",
+      "desc": "討論最適合您的工具或是方向",
+      "features": ["使用者研究", "設計系統"]
+    },
+    "cta": {
+      "title": "準備好開始您的專案了嗎？",
+      "desc": "讓我們討論如何透過簡潔的設計與穩固的開發，實現您的想法。",
+      "button": "聯絡我"
+    }
+  },
+  "contact": {
+    "title": "聯絡我",
+    "info": {
+      "email": "電子郵件",
+      "phone": "電話",
+      "location": "地點",
+      "city": "桃園，台灣"
+    },
+    "form": {
+      "title": "傳送訊息給我",
+      "name": "姓名",
+      "namePlaceholder": "您的姓名",
+      "email": "電子郵件",
+      "emailPlaceholder": "your@email.com",
+      "message": "訊息內容",
+      "messagePlaceholder": "告訴我關於您的專案...",
+      "submit": "傳送訊息"
+    }
+  },
+  "blog": {
+    "title": "部落格",
+    "readTime": "分鐘閱讀",
+    "newsletter": {
+      "title": "訂閱我的電子報",
+      "desc": "將最新的文章和見解直接傳送到您的收件匣。沒有垃圾郵件，只有優質內容。",
+      "placeholder": "your@email.com",
+      "button": "訂閱"
+    }
+  }
+}

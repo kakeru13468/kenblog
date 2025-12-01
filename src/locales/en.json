@@ -1,0 +1,157 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact Me",
+    "blog": "Blog"
+  },
+  "home": {
+    "hero": {
+      "title": "Hello, I'm a Creative Developer",
+      "description": "I craft beautiful digital experiences with clean code and thoughtful design. Specialized in modern web technologies and minimalist aesthetics.",
+      "cta": "View My Work"
+    },
+    "stats": {
+      "experience": "Experience",
+      "years": "5+ Years",
+      "location": "Based in",
+      "city": "New York, USA",
+      "available": "Available for work",
+      "status": "Open to opportunities"
+    },
+    "skills": {
+      "title": "Core Skills",
+      "elseTitle": "Other Skills"
+    },
+    "social": {
+      "title": "Social"
+    },
+    "github": {
+      "title": "GitHub Contributions"
+    },
+    "traffic": {
+      "title": "Site Visitors",
+      "days": "7-day trend"
+    },
+    "latestPost": {
+      "title": "Latest Post"
+    },
+    "resetPosition": "Reset Position"
+  },
+  "about": {
+    "title": "About Me",
+    "bio": {
+      "p1": "I'm a passionate developer and designer who loves creating meaningful digital experiences. With over 5 years of experience in the industry, I've worked with startups and established companies to bring their visions to life.",
+      "p2": "My approach combines technical expertise with creative thinking, always striving for simplicity and elegance in every project. I believe that great design is invisible and great code is maintainable."
+    },
+    "philosophy": {
+      "title": "Philosophy",
+      "quote": "\"Simplicity is the ultimate sophistication\""
+    },
+    "education": {
+      "title": "Education",
+      "degree": "Computer Science",
+      "university": "Chinese Culture University, 2024"
+    },
+    "experience": {
+      "title": "Work Experience",
+      "position": "Frontend Developer",
+      "company": "Freelancer",
+      "period": "2024 - Present"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "items": {
+      "ecommerce": {
+        "title": "E-Commerce Platform",
+        "desc": "Modern shopping experience with seamless checkout",
+        "category": "Web Development"
+      },
+      "designSystem": {
+        "title": "Design System",
+        "desc": "Comprehensive component library for enterprise",
+        "category": "UI/UX"
+      },
+      "mobileApp": {
+        "title": "Mobile App",
+        "desc": "Cross-platform application for productivity",
+        "category": "Mobile"
+      },
+      "portfolio": {
+        "title": "Portfolio Website",
+        "desc": "Clean and minimal portfolio for creative agency",
+        "category": "Web Design"
+      },
+      "dashboard": {
+        "title": "Dashboard Analytics",
+        "desc": "Real-time data visualization platform",
+        "category": "Web Development"
+      },
+      "branding": {
+        "title": "Brand Identity",
+        "desc": "Complete branding for tech startup",
+        "category": "Branding"
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "webDev": {
+      "title": "Web Development",
+      "desc": "Custom websites and web applications built with modern technologies",
+      "features": ["React & Next.js", "Responsive Design", "Performance Optimization"]
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "desc": "User-centered design that combines aesthetics with functionality",
+      "features": ["User Research", "Prototyping", "Design Systems"]
+    },
+    "mobile": {
+      "title": "Mobile Development",
+      "desc": "Native and cross-platform mobile applications",
+      "features": ["iOS & Android", "React Native", "App Store Launch"]
+    },
+    "branding": {
+      "title": "Branding",
+      "desc": "Complete brand identity and visual design services",
+      "features": ["Logo Design", "Brand Guidelines", "Marketing Materials"]
+    },
+    "cta": {
+      "title": "Ready to start your project?",
+      "desc": "Let's discuss how I can help bring your ideas to life with clean design and solid development.",
+      "button": "Get in Touch"
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "city": "New York, USA"
+    },
+    "form": {
+      "title": "Send me a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send Message"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "readTime": "min read",
+    "newsletter": {
+      "title": "Subscribe to my newsletter",
+      "desc": "Get the latest articles and insights delivered directly to your inbox. No spam, just quality content.",
+      "placeholder": "your@email.com",
+      "button": "Subscribe"
+    }
+  }
+}

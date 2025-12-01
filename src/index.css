@@ -1,0 +1,196 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+/* Global cursor styles */
+button {
+  cursor: pointer;
+}
+
+@theme {
+  --font-sans: "Noto Sans TC", "Microsoft JhengHei", "微軟正黑體", "PingFang TC", "Heiti TC", "黑體-繁", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --color-emerald-50: oklch(.979 .021 166.113);
+  --color-emerald-200: oklch(.905 .093 164.15);
+  --color-emerald-500: oklch(.696 .17 162.48);
+  --color-emerald-950: oklch(.262 .051 172.552);
+  
+  --color-cyan-50: oklch(.984 .019 200.873);
+  --color-cyan-100: oklch(.956 .045 203.388);
+  --color-cyan-200: oklch(.917 .08 205.041);
+  --color-cyan-300: oklch(.865 .127 207.078);
+  --color-cyan-400: oklch(.789 .154 211.53);
+  --color-cyan-500: oklch(.715 .143 215.221);
+  --color-cyan-600: oklch(.609 .126 221.723);
+  --color-cyan-700: oklch(.52 .105 223.128);
+  --color-cyan-800: oklch(.45 .085 224.283);
+  --color-cyan-900: oklch(.398 .07 227.392);
+  --color-cyan-950: oklch(.302 .056 229.695);
+  
+  --color-sky-100: oklch(.951 .026 236.824);
+  
+  --color-blue-50: oklch(.97 .014 254.604);
+  --color-blue-400: oklch(.707 .165 254.624);
+  --color-blue-500: oklch(.623 .214 259.815);
+  --color-blue-600: oklch(.546 .245 262.881);
+  
+  --color-neutral-50: oklch(.985 0 0);
+  --color-neutral-300: oklch(.87 0 0);
+  --color-neutral-400: oklch(.708 0 0);
+  --color-neutral-500: oklch(.556 0 0);
+  --color-neutral-600: oklch(.439 0 0);
+  --color-neutral-700: oklch(.371 0 0);
+  --color-neutral-900: oklch(.205 0 0);
+  --color-neutral-950: oklch(.145 0 0);
+  
+  --radius-lg: .625rem;
+  --radius-xl: calc(.625rem + 4px);
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+:root {
+  --font-size: 16px;
+  --background: #fff;
+  --foreground: oklch(.145 0 0);
+  --card: #fff;
+  --card-foreground: oklch(.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(.145 0 0);
+  --primary: #0891b2;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(.95 .0058 264.53);
+  --secondary-foreground: #0891b2;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #0891b2;
+  --destructive: #d4183d;
+  --destructive-foreground: #fff;
+  --border: #0891b21a;
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --ring: #0891b2;
+  --radius: .625rem;
+  --sidebar: oklch(.985 0 0);
+  --sidebar-foreground: oklch(.145 0 0);
+  --sidebar-primary: #0891b2;
+  --sidebar-primary-foreground: oklch(.985 0 0);
+  --sidebar-accent: oklch(.97 0 0);
+  --sidebar-accent-foreground: oklch(.205 0 0);
+  --sidebar-border: oklch(.922 0 0);
+  --sidebar-ring: oklch(.708 0 0);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #171717;
+  --card-foreground: #fafafa;
+  --popover: #171717;
+  --popover-foreground: #fafafa;
+  --primary: #06b6d4;
+  --primary-foreground: #0a0a0a;
+  --secondary: #262626;
+  --secondary-foreground: #fafafa;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #262626;
+  --accent-foreground: #06b6d4;
+  --destructive: oklch(.396 .141 25.723);
+  --destructive-foreground: oklch(.637 .237 25.331);
+  --border: #06b6d433;
+  --input: #262626;
+  --ring: #06b6d4;
+  --sidebar: #171717;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #06b6d4;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #262626;
+  --sidebar-ring: #06b6d4;
+}
+
+html {
+  font-size: var(--font-size);
+  scrollbar-gutter: stable;
+}
+
+/* 平滑的主題切換過渡效果 */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 所有元素的顏色過渡 */
+*, *::before, *::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 允許輸入框選取文字 */
+input, textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+* {
+  border-color: var(--border);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+h4, p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+button, label {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+input {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Markdown Content Styles */
+.markdown-content {
+  line-height: 1.8;
+}
+
+.markdown-content > *:first-child {
+  margin-top: 0;
+}
+
+.markdown-content > *:last-child {
+  margin-bottom: 0;
+}
