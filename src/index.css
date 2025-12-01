@@ -194,3 +194,13 @@ input {
 .markdown-content > *:last-child {
   margin-bottom: 0;
 }
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-content pre {
+  overflow-x: auto;
+  max-width: 100%;
+}

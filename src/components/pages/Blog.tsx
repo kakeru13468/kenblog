@@ -11,7 +11,7 @@ export function Blog() {
   const navigate = useNavigate();
   const lang = i18n.language.startsWith('zh') ? 'zh' : 'en';
   const posts = getAllPosts();
-  
+
   const [email, setEmail] = useState('');
   const [subscribeStatus, setSubscribeStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [subscribeMessage, setSubscribeMessage] = useState('');
@@ -28,7 +28,7 @@ export function Blog() {
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     const result = addSubscriber(email);
-    
+
     if (result.success) {
       setSubscribeStatus('success');
       setSubscribeMessage(lang === 'zh' ? '訂閱成功！感謝您的支持。' : 'Subscribed successfully! Thank you for your support.');
@@ -41,7 +41,7 @@ export function Blog() {
         setSubscribeMessage(lang === 'zh' ? '請輸入有效的 Email 地址。' : 'Please enter a valid email address.');
       }
     }
-    
+
     // 3 秒後重置狀態
     setTimeout(() => {
       setSubscribeStatus('idle');
@@ -59,7 +59,7 @@ export function Blog() {
         {t('blog.title')}
       </motion.h2>
 
-      <div className="grid grid-cols-12 gap-4 auto-rows-[260px]">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-auto md:auto-rows-[260px]">
         {posts.map((post, index) => (
           <motion.article
             key={post.id}
@@ -67,11 +67,10 @@ export function Blog() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             onClick={() => navigate(`/blog/${post.id}`)}
-            className={`${
-              index === 0
+            className={`${index === 0
                 ? 'col-span-12 md:col-span-8 row-span-1'
                 : 'col-span-12 md:col-span-4 row-span-1'
-            } bg-white dark:bg-neutral-900 border border-cyan-200 dark:border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-600 dark:hover:border-cyan-400 cursor-pointer group`}
+              } bg-white dark:bg-neutral-900 border border-cyan-200 dark:border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-600 dark:hover:border-cyan-400 cursor-pointer group`}
           >
             <div className="flex items-center gap-3 mb-4">
               <span className="px-3 py-1 bg-cyan-50 dark:bg-cyan-950/30 text-cyan-600 dark:text-cyan-400 rounded-lg">
@@ -111,7 +110,7 @@ export function Blog() {
           <p className="text-cyan-100 dark:text-cyan-50 mb-6 max-w-2xl">
             {t('blog.newsletter.desc')}
           </p>
-          <form onSubmit={handleSubscribe} className="flex gap-3">
+          <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row gap-3">
             <input
               type="email"
               value={email}
@@ -119,7 +118,7 @@ export function Blog() {
               placeholder={t('blog.newsletter.placeholder')}
               className="flex-1 bg-cyan-700/50 dark:bg-cyan-800/50 border border-cyan-500 dark:border-cyan-400/30 rounded-xl px-4 py-3 text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 dark:focus:border-cyan-300"
             />
-            <button 
+            <button
               type="submit"
               className="bg-white text-cyan-600 px-6 py-3 rounded-xl hover:bg-cyan-50 whitespace-nowrap cursor-pointer"
             >
@@ -130,9 +129,8 @@ export function Blog() {
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className={`mt-4 text-sm ${
-                subscribeStatus === 'success' ? 'text-cyan-100' : 'text-red-200'
-              }`}
+              className={`mt-4 text-sm ${subscribeStatus === 'success' ? 'text-cyan-100' : 'text-red-200'
+                }`}
             >
               {subscribeMessage}
             </motion.p>

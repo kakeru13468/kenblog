@@ -31,17 +31,17 @@ function GitHubContributionGraph() {
       try {
         // Using GitHub's contribution calendar API through a CORS-friendly approach
         const response = await fetch(`https://github-contributions-api.jogruber.de/v4/${username}?y=last`);
-        
+
         if (!response.ok) {
           throw new Error('Failed to fetch');
         }
-        
+
         const data = await response.json();
-        
+
         // Process the data into weeks format (last 7 weeks)
         const allContributions = data.contributions || [];
         const last49Days = allContributions.slice(-49); // 7 weeks * 7 days
-        
+
         // Group into weeks
         const weeks: ContributionWeek[] = [];
         for (let i = 0; i < last49Days.length; i += 7) {
@@ -53,7 +53,7 @@ function GitHubContributionGraph() {
             })),
           });
         }
-        
+
         setContributions(weeks);
         setTotalContributions(data.total?.lastYear || allContributions.reduce((sum: number, day: { count: number }) => sum + day.count, 0));
         setLoading(false);
@@ -120,7 +120,7 @@ function GitHubContributionGraph() {
     <div className="flex flex-col h-full">
       <div className="flex items-center justify-between mb-2">
         <p className="text-neutral-500 dark:text-neutral-400 text-sm">{t('home.github.title')}</p>
-        <a 
+        <a
           href={`https://github.com/${username}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -173,10 +173,10 @@ function WebsiteTrafficChart() {
         // Hit the counter API to increment and get the count
         const response = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
         const data = await response.json();
-        
+
         if (data.value) {
           setVisitorCount(data.value);
-          
+
           // Generate realistic daily data based on total visitors
           // This simulates a growth trend
           const baseDaily = Math.floor(data.value / 30); // Average daily
@@ -216,20 +216,20 @@ function WebsiteTrafficChart() {
   const max = Math.max(...data);
   const min = Math.min(...data);
   const range = max - min || 1;
-  
+
   const points = data.map((value, index) => {
     const x = padding + (index / (data.length - 1)) * chartWidth;
     const y = padding + chartHeight - ((value - min) / range) * chartHeight;
     return { x, y, value };
   });
-  
+
   const pathD = points
     .map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`)
     .join(' ');
-  
+
   const areaD = `${pathD} L ${points[points.length - 1].x} ${height - padding} L ${padding} ${height - padding} Z`;
 
-  const growthPercent = data.length >= 2 && data[0] > 0 
+  const growthPercent = data.length >= 2 && data[0] > 0
     ? Math.round(((data[data.length - 1] - data[0]) / data[0]) * 100)
     : 0;
 
@@ -329,20 +329,20 @@ export function Home() {
           <div className="flex flex-col h-full">
             <p className="text-neutral-500 dark:text-neutral-400 mb-4">{t('home.social.title')}</p>
             <div className="flex items-center justify-center gap-6 flex-1">
-              <a 
-                href="https://github.com/kakeru13468" 
+              <a
+                href="https://github.com/kakeru13468"
                 className="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-950/50 flex items-center justify-center text-cyan-600 dark:text-cyan-400 hover:bg-cyan-100 dark:hover:bg-cyan-900/50 hover:scale-110 transition-all"
               >
                 <Github className="w-6 h-6" />
               </a>
-              <a 
-                href="https://www.linkedin.com/in/kai-xiang-you/" 
+              <a
+                href="https://www.linkedin.com/in/kai-xiang-you/"
                 className="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-950/50 flex items-center justify-center text-cyan-600 dark:text-cyan-400 hover:bg-cyan-100 dark:hover:bg-cyan-900/50 hover:scale-110 transition-all"
               >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a 
-                href="https://www.threads.com/@kakeru13468" 
+              <a
+                href="https://www.threads.com/@kakeru13468"
                 className="w-12 h-12 rounded-xl bg-cyan-50 dark:bg-cyan-950/50 flex items-center justify-center text-cyan-600 dark:text-cyan-400 hover:bg-cyan-100 dark:hover:bg-cyan-900/50 hover:scale-110 transition-all"
               >
                 <Twitter className="w-6 h-6" />
@@ -378,7 +378,7 @@ export function Home() {
         const latestPost = posts[0];
         if (!latestPost) return null;
         return (
-          <div 
+          <div
             className="flex flex-col h-full cursor-pointer"
             onClick={() => navigate(`/blog/${latestPost.id}`)}
           >
@@ -450,7 +450,7 @@ export function Home() {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
-      <div className="grid grid-cols-12 gap-4 auto-rows-[200px]">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-auto md:auto-rows-[200px]">
         {cards.map((id, index) => (
           <motion.div
             key={id}
@@ -464,7 +464,7 @@ export function Home() {
               scale: 1.02,
               transition: { duration: 0.2 },
             }}
-            className={`${gridClasses[id]} ${getCardStyles(id)} rounded-3xl`}
+            className={`${gridClasses[id]} ${getCardStyles(id)} rounded-3xl min-h-[200px]`}
           >
             {renderCardContent(id)}
           </motion.div>
