@@ -14,8 +14,6 @@ export function LanguageSwitcher() {
     { code: 'ja', label: '日本語' },
   ];
 
-  const currentLanguage = languages.find((lang) => lang.code === i18n.language) || languages[0];
-
   const handleLanguageChange = (langCode: string) => {
     i18n.changeLanguage(langCode);
     setIsOpen(false);
