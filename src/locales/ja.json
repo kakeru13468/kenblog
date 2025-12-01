@@ -6,5 +6,149 @@
     "services": "サービス",
     "contact": "お問い合わせ",
     "blog": "ブログ"
+  },
+  "home": {
+    "hero": {
+      "title": "こんにちは、私はKen、フロントエンド開発者です",
+      "description": "フロントエンドウェブ制作、ミニマリストとベントボックススタイルが得意です",
+      "cta": "私のプロフィールを見る"
+    },
+    "stats": {
+      "experience": "経験",
+      "years": "1年以上",
+      "location": "所在地",
+      "city": "台北、台湾",
+      "available": "現在の状況",
+      "status": "案件受付中"
+    },
+    "social": {
+      "title": "ソーシャルメディア"
+    },
+    "skills": {
+      "title": "コアスキル",
+      "elseTitle": "その他のスキル"
+    },
+    "github": {
+      "title": "GitHub 貢献記録"
+    },
+    "traffic": {
+      "title": "サイト訪問者数",
+      "days": "過去7日のトレンド"
+    },
+    "latestPost": {
+      "title": "最新記事"
+    },
+    "resetPosition": "位置をリセット"
+  },
+  "about": {
+    "title": "私について",
+    "bio": {
+      "h1": "こんにちは、私はKenです。Kakeruとも呼んでください",
+      "p1": "私は独立開発者で、面白いものを見ると試してみずにはいられず、新しい技術の研究も好きです。情報工学科を卒業し、1年の開発経験を持ち、ウェブ開発とAIの両方をカバーしています。",
+      "p2": "フロントエンド開発では、React、JavaScript、HTML、CSS、Tailwind CSS、Git、GitHub、日本語、プロジェクト管理などの技術を使用してウェブサイトを構築することが得意です。",
+      "p3": "バックエンド開発では、Node.js、Express、PostgreSQLなどの技術を使用してバックエンドサーバーを構築することが得意です。",
+      "p4": "ウェブサイトのホスティングには、台湾のスタートアップブランドであるZeaburの使用をお勧めします。"
+    },
+    "philosophy": {
+      "title": "デザイン哲学",
+      "quote": "「シンプルさは究極の洗練である。」"
+    },
+    "education": {
+      "title": "学歴",
+      "degree": "情報工学科",
+      "university": "中国文化大学, 2024"
+    },
+    "experience": {
+      "title": "職歴",
+      "position": "フロントエンド開発エンジニア",
+      "company": "フリーランス",
+      "period": "2025 - 現在"
+    },
+    "photo": {
+      "clickToView": "クリックして写真全体を見る",
+      "clickToReturn": "クリックしてアバターに戻る"
+    }
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "items": {
+      "ecommerce": {
+        "title": "Eコマースプラットフォーム",
+        "desc": "スムーズなチェックアウト体験を備えたモダンなショッピングサイト",
+        "category": "ウェブ開発"
+      },
+      "designSystem": {
+        "title": "デザインシステム",
+        "desc": "企業向けの包括的なコンポーネントライブラリ",
+        "category": "UI/UX"
+      },
+      "mobileApp": {
+        "title": "モバイルアプリケーション",
+        "desc": "生産性を向上させるクロスプラットフォームアプリケーション",
+        "category": "モバイル開発"
+      },
+      "portfolio": {
+        "title": "ポートフォリオウェブサイト",
+        "desc": "クリエイティブエージェンシー向けのシンプルでミニマルなポートフォリオ",
+        "category": "ウェブデザイン"
+      },
+      "dashboard": {
+        "title": "データ分析ダッシュボード",
+        "desc": "リアルタイムデータ可視化プラットフォーム",
+        "category": "ウェブ開発"
+      },
+      "branding": {
+        "title": "ブランドアイデンティティ",
+        "desc": "テクノロジースタートアップ向けの完全なブランドデザイン",
+        "category": "ブランドデザイン"
+      }
+    }
+  },
+  "services": {
+    "title": "サービス",
+    "webDev": {
+      "title": "ウェブ開発",
+      "desc": "モダンな技術で構築されたカスタムウェブサイトとアプリケーション",
+      "features": ["React & Next.js", "レスポンシブデザイン"]
+    },
+    "uiux": {
+      "title": "技術コンサルティング",
+      "desc": "あなたに最適なツールや方向性について話し合います",
+      "features": ["ユーザーリサーチ", "デザインシステム"]
+    },
+    "cta": {
+      "title": "プロジェクトを始める準備はできていますか？",
+      "desc": "シンプルなデザインと堅牢な開発を通じて、あなたのアイデアを実現する方法について話し合いましょう。",
+      "button": "お問い合わせ"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "info": {
+      "email": "メール",
+      "phone": "電話",
+      "location": "場所",
+      "city": "桃園、台湾"
+    },
+    "form": {
+      "title": "メッセージを送る",
+      "name": "お名前",
+      "namePlaceholder": "あなたの名前",
+      "email": "メール",
+      "emailPlaceholder": "your@email.com",
+      "message": "メッセージ",
+      "messagePlaceholder": "あなたのプロジェクトについて教えてください...",
+      "submit": "メッセージを送信"
+    }
+  },
+  "blog": {
+    "title": "ブログ",
+    "readTime": "分で読む",
+    "newsletter": {
+      "title": "ニュースレターを購読する",
+      "desc": "最新の記事と洞察を直接受信トレイに配信します。スパムなし、質の高いコンテンツのみ。",
+      "placeholder": "your@email.com",
+      "button": "購読"
+    }
   }
 }

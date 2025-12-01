@@ -51,19 +51,23 @@ export function LanguageSwitcher() {
             exit={{ opacity: 0, y: 10 }}
             className="absolute right-0 mt-2 w-32 bg-white dark:bg-neutral-900 rounded-xl shadow-lg border border-cyan-100 dark:border-neutral-800 overflow-hidden z-50"
           >
-            {languages.map((lang) => (
-              <button
-                key={lang.code}
-                onClick={() => handleLanguageChange(lang.code)}
-                className={`w-full px-4 py-2 text-left text-sm transition-colors ${
-                  i18n.language === lang.code
-                    ? 'bg-cyan-50 dark:bg-cyan-950/30 text-cyan-600 dark:text-cyan-400'
-                    : 'text-neutral-600 dark:text-neutral-400 hover:bg-gray-50 dark:hover:bg-neutral-800'
-                }`}
-              >
-                {lang.label}
-              </button>
-            ))}
+            {languages.map((lang) => {
+              const currentLang = i18n.language.startsWith('zh') ? 'zh' : i18n.language;
+              const isActive = currentLang === lang.code;
+              return (
+                <button
+                  key={lang.code}
+                  onClick={() => handleLanguageChange(lang.code)}
+                  className={`w-full px-4 py-2 text-left text-sm transition-colors ${
+                    isActive
+                      ? 'bg-cyan-50 dark:bg-cyan-950/30 text-cyan-600 dark:text-cyan-400'
+                      : 'text-neutral-600 dark:text-neutral-400 hover:bg-gray-50 dark:hover:bg-neutral-800'
+                  }`}
+                >
+                  {lang.label}
+                </button>
+              );
+            })}
           </motion.div>
         )}
       </AnimatePresence>

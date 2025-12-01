@@ -102,7 +102,7 @@ export function About() {
           </motion.div>
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
             <p className="text-white text-sm font-medium">
-              {showFullPhoto ? '點擊返回頭像' : '點擊查看完整照片'}
+              {showFullPhoto ? t('about.photo.clickToReturn') : t('about.photo.clickToView')}
             </p>
           </div>
         </motion.div>

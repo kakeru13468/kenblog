@@ -64,6 +64,10 @@
       "position": "前端開發工程師",
       "company": "自由接案 / Freelancer",
       "period": "2025 - 至今"
+    },
+    "photo": {
+      "clickToView": "點擊查看完整照片",
+      "clickToReturn": "點擊返回頭像"
     }
   },
   "projects": {

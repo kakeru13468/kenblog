@@ -43,23 +43,30 @@
   "about": {
     "title": "About Me",
     "bio": {
-      "p1": "I'm a passionate developer and designer who loves creating meaningful digital experiences. With over 5 years of experience in the industry, I've worked with startups and established companies to bring their visions to life.",
-      "p2": "My approach combines technical expertise with creative thinking, always striving for simplicity and elegance in every project. I believe that great design is invisible and great code is maintainable."
+      "h1": "Hello, I'm Ken, you can also call me Kakeru",
+      "p1": "I'm an independent developer who can't help but try out interesting things and enjoys researching new technologies. I graduated from the Department of Information Engineering with 1 year of development experience, covering both web development and AI.",
+      "p2": "For frontend development, I'm skilled in using React, JavaScript, HTML, CSS, Tailwind CSS, Git, GitHub, Japanese, Project Management and other technologies to build websites.",
+      "p3": "For backend development, I'm skilled in using Node.js, Express, PostgreSQL and other technologies to build backend servers.",
+      "p4": "I recommend using Zeabur for website hosting, a startup brand from Taiwan."
     },
     "philosophy": {
-      "title": "Philosophy",
+      "title": "Design Philosophy",
       "quote": "\"Simplicity is the ultimate sophistication\""
     },
     "education": {
       "title": "Education",
-      "degree": "Computer Science",
+      "degree": "Information Engineering",
       "university": "Chinese Culture University, 2024"
     },
     "experience": {
       "title": "Work Experience",
       "position": "Frontend Developer",
       "company": "Freelancer",
-      "period": "2024 - Present"
+      "period": "2025 - Present"
+    },
+    "photo": {
+      "clickToView": "Click to view full photo",
+      "clickToReturn": "Click to return to avatar"
     }
   },
   "projects": {

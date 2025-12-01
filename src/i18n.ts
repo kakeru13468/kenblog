@@ -13,9 +13,18 @@ i18n
     resources: {
       en: { translation: en },
       zh: { translation: zh },
+      'zh-TW': { translation: zh },
+      'zh-CN': { translation: zh },
       ja: { translation: ja },
     },
-    fallbackLng: 'en',
+    lng: 'zh', // 預設語言為中文
+    fallbackLng: 'zh', // 備用語言為中文
+    supportedLngs: ['en', 'zh', 'zh-TW', 'zh-CN', 'ja'],
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
+    },
     interpolation: {
       escapeValue: false,
     },
