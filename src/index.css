@@ -51,7 +51,7 @@ button {
 
 :root {
   --font-size: 16px;
-  --background: #fff;
+  --background: #fdfbf7;
   --foreground: oklch(.145 0 0);
   --card: #fff;
   --card-foreground: oklch(.145 0 0);
@@ -67,7 +67,7 @@ button {
   --accent-foreground: #0891b2;
   --destructive: #d4183d;
   --destructive-foreground: #fff;
-  --border: #0891b21a;
+  --border: #0891b240;
   --input: transparent;
   --input-background: #f3f3f5;
   --switch-background: #cbced4;

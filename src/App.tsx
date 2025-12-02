@@ -11,6 +11,7 @@ import { Contact } from './components/pages/Contact';
 import { Blog } from './components/pages/Blog';
 import { BlogPost } from './components/pages/BlogPost';
 import { ThemeProvider } from './components/ThemeProvider';
+import { Footer } from './components/Footer';
 
 // 滾動到頂部的元件
 function ScrollToTop() {
@@ -55,7 +56,7 @@ function AppContent() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen">
+      <div className="min-h-screen flex flex-col">
         <ScrollToTop />
         <Navigation currentPage={getCurrentPage()} />
         <main className="pt-20">
@@ -72,6 +73,7 @@ function AppContent() {
             <Route path="*" element={<Home />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </ThemeProvider>
   );
