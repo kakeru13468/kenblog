@@ -8,7 +8,7 @@ export function About() {
   const { t } = useTranslation();
   const [showFullPhoto, setShowFullPhoto] = useState(false);
   const [rotation, setRotation] = useState(0);
-  
+
   const handlePhotoClick = () => {
     setShowFullPhoto(!showFullPhoto);
     setRotation(prev => prev + 360);
@@ -24,13 +24,13 @@ export function About() {
         {t('about.title')}
       </motion.h2>
 
-      <div className="grid grid-cols-12 gap-4 auto-rows-[180px]">
+      <div className="grid grid-cols-12 gap-4 auto-rows-[180px] md:auto-rows-[180px]">
         {/* Main Bio - 2 rows */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="col-span-12 md:col-span-7 row-span-2 bg-linear-to-br from-cyan-600 to-cyan-700 dark:from-cyan-500 dark:to-cyan-600 rounded-3xl p-8 md:p-12 flex flex-col justify-center"
+          className="col-span-12 md:col-span-7 row-span-3 md:row-span-2 bg-linear-to-br from-cyan-600 to-cyan-700 dark:from-cyan-500 dark:to-cyan-600 rounded-3xl p-8 md:p-12 flex flex-col justify-center overflow-y-auto"
         >
           <h1 className="text-cyan-100 dark:text-cyan-50 mb-4">{t('about.bio.h1')}</h1>
           <p className="text-cyan-100 dark:text-cyan-50 mb-4">
@@ -52,17 +52,17 @@ export function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15 }}
-          className="col-span-12 md:col-span-5 row-span-3 rounded-3xl overflow-hidden relative group cursor-pointer"
+          className="col-span-12 md:col-span-5 row-span-2 md:row-span-3 rounded-3xl overflow-hidden relative group cursor-pointer"
           onClick={handlePhotoClick}
           style={{ perspective: '1000px' }}
         >
           <motion.div
             animate={{ rotateY: rotation }}
-            transition={{ 
+            transition={{
               duration: 0.8,
               ease: [0.4, 0, 0.2, 1]
             }}
-            style={{ 
+            style={{
               transformStyle: 'preserve-3d',
               width: '100%',
               height: '100%',
@@ -77,13 +77,13 @@ export function About() {
                 WebkitBackfaceVisibility: 'hidden',
               }}
             >
-              <img 
+              <img
                 src={showFullPhoto ? kakeruPhoto : avatarPhoto}
                 alt={showFullPhoto ? "Kakeru" : "Avatar"}
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            
+
             {/* Back side */}
             <div
               className="absolute inset-0"
@@ -93,7 +93,7 @@ export function About() {
                 transform: 'rotateY(180deg)'
               }}
             >
-              <img 
+              <img
                 src={showFullPhoto ? avatarPhoto : kakeruPhoto}
                 alt={showFullPhoto ? "Avatar" : "Kakeru"}
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
