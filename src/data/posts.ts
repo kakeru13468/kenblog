@@ -14,20 +14,24 @@ export interface BlogPost {
   title: {
     zh: string;
     en: string;
+    jp: string;
   };
   excerpt: {
     zh: string;
     en: string;
+    jp: string;
   };
   content: {
     zh: string;
     en: string;
+    jp: string;
   };
   date: string;         // 發布日期 (例如: "2024-11-28")
   readTime: number;     // 閱讀時間（分鐘）
   category: {
     zh: string;
     en: string;
+    jp: string;
   };
   tags: string[];       // 標籤
   coverImage?: string;  // 封面圖片 URL（可選），例如：'/images/blog/cover.jpg' 或 'https://...'
@@ -35,16 +39,17 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
-  // === KX Lyrics 日語學習系列文章 ===
   {
     id: 'minami373-singer-introduction',
     title: {
       zh: '用盡全力、聲嘶力竭地活著-美波-歌手介紹',
       en: 'Minami - Singer Introduction',
+      jp: '全力で、声を枯らして生きる - 美波 - 歌手紹介',
     },
     excerpt: {
       zh: '人生短暫，沒有必要為了迎合他人而活',
       en: 'Life is short, there is no need to live for others.',
+      jp: '人生は短い、他人に合わせて生きる必要なんてない。',
     },
     content: {
       zh: `
@@ -146,44 +151,198 @@ export const posts: BlogPost[] = [
 
       `,
       en: `
-# Learn Japanese Through Songs: Start Your Journey with Music
+# Minami - The Singer Who Screams Out Confusion and Persistence
 
-There are many ways to learn Japanese, but learning through music is definitely one of the most enjoyable. At [KX Lyrics](https://kxlyrics.com/articles), we're dedicated to helping people learn Japanese through songs.
+"Life is short, there is no need to live to please others."
 
-## Why Learn Japanese Through Songs?
+This is Minami's philosophy of life. Her music is always full of self-doubt, conflict, and pain, but she never gives up. She does everything with all her might, screaming her heart out.
 
-### 1. Increased Motivation
-When listening to songs you love, learning becomes enjoyment rather than a chore.
+---
 
-### 2. Natural Vocabulary Retention
-The melody helps you remember words and phrases from the lyrics more easily.
+## Origin and Musical Enlightenment
 
-### 3. Learn Authentic Expressions
-Japanese songs contain many everyday conversational phrases and authentic expressions.
+From **Saitama Prefecture**, Minami was impacted by **Yutaka Ozaki** at a young age and began writing lyrics and composing music.
 
-### 4. Improve Pronunciation
-Singing along helps you practice pronunciation and intonation.
+After buying her first guitar in high school, she started her musical journey.
 
-## How to Effectively Learn Japanese Through Songs?
+---
 
-1. **Choose songs appropriate for your level** - Beginners should start with slower songs with simpler lyrics
-2. **Listen several times first** - Familiarize yourself with the melody and overall feel
-3. **Follow along with lyrics** - Listen while reading the lyrics
-4. **Look up new words** - Mark unfamiliar words and look up their meanings
-5. **Practice singing along** - Try to sing along to practice pronunciation
-6. **Understand the grammar** - Analyze the grammatical structures in the lyrics
+## A Rough but Persistent Musical Path
 
-## Recommended Beginner Songs
+Minami's creative career was not smooth sailing.
 
-- **Sakura (Cherry Blossoms)** - Naotaro Moriyama
-- **Ito (Thread)** - Miyuki Nakajima
-- **Himawari no Yakusoku** - Motohiro Hata
+She once shared at a concert that she was very lonely when she first started making music:
 
-## Conclusion
+- Started from **live houses with no audience**
+- Constantly doubted herself and thought about giving up
+- Denied herself countless times
+- Even had an expression of "I'm all alone, how pitiful" while singing
 
-Music is a bridge that transcends language barriers. Learning Japanese through songs is not only effective but also allows you to deeply understand Japanese culture. Start your musical Japanese learning journey today!
+But even so, she still **clung desperately to music**.
 
-For more learning resources, visit [KX Lyrics](https://kxlyrics.com/articles)
+Therefore, in her works, you can hear a lot of dialogue with herself and resistance against self-struggle.
+
+Anyone who has heard Minami can feel the emotions ranging from confusion and self-denial to striving to persist. She is a singer who resonates deeply with people.
+
+---
+
+## The Opportunity to be Known by the Public - "Kawaki wo Ameku"
+
+What truly brought her into the public eye was the opening theme song **"Kawaki wo Ameku"** for the anime "Domestic Girlfriend".
+
+This song established her representative impression:
+
+- **Heartbreakingly screaming tone**
+- **Emotionally intense lyrics**
+- **Melody with a sense of sprinting**
+- **Perfectly echoing the anime's emotions**
+
+Because of this song, everyone recognized this singer who resonates with countless people for the first time. Currently, the view count has exceeded **240 million**.
+
+---
+
+## Me and Minami - The Moment I Was Saved by Music
+
+I was also someone saved by Minami.
+
+During a period of confusion and low tide, I heard **"Lilac"**.
+
+This song told me:
+
+> "Don't live to please others.
+> Life uses up all your strength just living for yourself, there's no spare energy left."
+
+This sentence completely changed my attitude towards life.
+
+---
+
+## Minami Once Said
+
+> **Failure, frustration, and pain will definitely make you stronger.**
+> **If success is waiting for you just a few steps ahead after failure,**
+> **It would be a pity to give up now.**
+> **If anyone is worrying about their life,**
+> **I hope to walk forward slowly, side by side with everyone.**
+
+How can one not like such a singer who is so close to us ordinary people and whose feelings are so relatable!
+
+---
+
+## To You Who Are Reading This
+
+I hope that after reading my introduction, you will listen to more of Minami's songs.
+
+Whether you are currently:
+
+- Feeling lost
+- At a crossroads in life
+- Or moving towards your dreams
+
+You can find your own feelings and interpretations in Minami's music.
+
+Finally, attaching photos from the concerts I attended for two consecutive years.
+---
+
+![Minami Concert 2024](/images/2024minami.jpg)
+
+![Minami Concert 2025 - EARTH-TICATION](/images/2025minami.jpg)
+      `,
+      jp: `
+# 美波 ─ 叫びで迷いと執念を歌う歌手
+
+「人生は短い、他人に合わせて生きる必要なんてない。」
+
+これが美波の人生哲学です。彼女の音楽は常に自己不信、葛藤、苦痛に満ちていますが、決して諦めようとはしません。何事も全力で、声を枯らして行います。
+
+---
+
+## 出身と音楽の目覚め
+
+**埼玉県**出身の美波は、幼少期に**尾崎豊**の衝撃を受け、作詞作曲を始めました。
+
+高校で初めてのギターを買ってから、彼女の音楽の道が始まりました。
+
+---
+
+## 順風満帆ではなかったが執着した音楽の道
+
+美波の創作活動は順風満帆ではありませんでした。
+
+彼女はかつてライブで、音楽を始めた当初は非常に孤独だったと語っています：
+
+- **観客のいないライブハウス**からスタート
+- 絶えず自己不信に陥り、諦めようと思ったことも
+- 何度も自分を否定した
+- 歌っている時でさえ「自分は一人ぼっちで、かわいそう」という表情をしていた
+
+それでも彼女は、**死に物狂いで音楽にしがみつきました**。
+
+そのため、彼女の作品には、自分自身との対話や、自己葛藤への抵抗が多く見られます。
+
+美波を聴いたことがある人なら誰でも、迷い、自己否定から努力して堅持するまでの感情を感じ取ることができます。彼女は人々深く共感させる歌手です。
+
+---
+
+## 世間に知られるきっかけ ──『カワキヲアメク』
+
+彼女を真に大衆の視野に入れたのは、アニメ『ドメスティックな彼女』のオープニングテーマ**「カワキヲアメク」**でした。
+
+この曲は彼女の代表的な印象を決定づけました：
+
+- **心が痛むほどの叫び声**
+- **感情の濃い歌詞**
+- **疾走感のあるメロディ**
+- **アニメの感情との完璧な呼応**
+
+この曲のおかげで、誰もが初めてこの無数の人々に共感を与える歌手を知ることになりました。現在、再生回数は**2.4億回**を突破しています。
+
+---
+
+## 私と美波 ── 音楽に救われた瞬間
+
+私も美波に救われた一人です。
+
+迷いと低迷の時期に、私は**「ライラック」**を聴きました。
+
+この曲は私に教えてくれました：
+
+> 「他人に合わせて生きるな。
+> 人生は自分のために全力を尽くすだけで、余分な力なんて残っていない。」
+
+この言葉は、私の人生に対する態度を完全に変えました。
+
+---
+
+## 美波はかつてこう言いました
+
+> **失敗、挫折、苦痛、これらは必ずあなたを強くします。**
+> **もし失敗の後、数歩先に成功が待っているとしたら、**
+> **今諦めるのはあまりにも惜しいです。**
+> **もし誰かが自分の人生に悩んでいるなら、**
+> **私は皆と肩を並べて、一緒にゆっくりと前に進んでいきたいです。**
+
+私たち一般人とこれほど近く、感情がこれほど身近な歌手を、どうして好きにならずにいられるでしょうか！
+
+---
+
+## 読んでいるあなたへ
+
+私の紹介を読んだ後、もっと美波の曲を聴いてみてほしいです。
+
+あなたが今：
+
+- 迷っている
+- 人生の岐路に立っている
+- あるいは夢に向かって進んでいる
+
+どのような状態であっても、美波の音楽の中に、あなただけの感情と解釈を見つけることができるでしょう。
+
+最後に、2年連続で参戦したライブの写真を添付します。
+---
+
+![美波ライブ 2024](/images/2024minami.jpg)
+
+![美波ライブ 2025 - EARTH-TICATION](/images/2025minami.jpg)
       `,
     },
     date: '2025-12-01',
@@ -191,11 +350,228 @@ For more learning resources, visit [KX Lyrics](https://kxlyrics.com/articles)
     category: {
       zh: '歌手分享',
       en: 'Singer Sharing',
+      jp: '歌手紹介',
     },
     tags: ['歌手', '音樂', '分享', '美波'],
     author: 'Kakeru',
   },
- 
+  {
+    id: "git-problem",
+    title: {
+      zh: "沒踩過坑不敢說自己會Git",
+      en: "You Can't Say You Know Git Until You've Stumbled",
+      jp: "失敗を経験せずにGitを知っているとは言えない",
+    },
+    excerpt: {
+      zh: "這邊記錄順便介紹自己在開發中遇到的一些git問題",
+      en: "Recording and introducing some Git problems encountered during development.",
+      jp: "開発中に遭遇したGitの問題を記録し、紹介します。",
+    },
+    content: {
+      zh: `
+# Git 筆記
+
+這個筆記是根據本人在工作以及專案時踩過的坑，會陸續更新。
+
+## 創建新分支
+
+- \`git checkout -b name\` # 創建本地分支並且切換
+- \`git push origin name\` # 將本地分支上傳至雲端(在雲端創建新分支)
+
+## 移動分支
+
+\`git checkout "target branch"\`
+
+## 更新分支
+
+**情境:**
+
+dev branch 基於舊的 main，當 main 更新時 dev 也想要將 main 更新的 code 更新過來但不想要更動在 dev 改動的東西。
+
+\`\`\`mermaid
+gitGraph
+  commit id: "first commit"
+  branch dev
+  commit id: "new branch first"
+  commit id: "second commit"
+  checkout main
+  commit id: "second commit"
+  commit id: "second update commit"
+\`\`\`
+
+1. \`git checkout main\` # 切換分支
+2. \`git pull\`
+3. \`git checkout dev\`
+4. \`git merge main\`
+
+## 刪除分支
+
+\`git push origin --delete target branch\`
+
+## 刪除指定 commit
+
+1. \`git rebase -i HEAD~2\` # 顯示前兩筆，~ 後的數字可以自己改
+2. 將 Pick 改成 drop
+3. \`:wq\` 儲存
+4. \`git push origin 分支名稱 --force\`
+
+## 退回指定 commit
+
+\`git reset <指定commit>\`
+
+## 修改 Github repo 的資料夾名稱
+
+**一般情況**
+
+\`git mv <old name> <new name>\`
+
+**如遇到僅需要修改大小寫的情況**
+
+1. \`git mv <old name> <任意名稱>\`
+2. \`git mv <任意名稱> <new name>\`
+
+由於 Windows 環境對檔案系統不區分大小寫，但 Git 區分，因此無法直接做修改。
+      `,
+      en: `
+# Git Notes
+
+These notes are based on the pitfalls I've encountered during work and projects, and will be updated periodically.
+
+## Create New Branch
+
+- \`git checkout -b name\` # Create local branch and switch to it
+- \`git push origin name\` # Upload local branch to cloud (create new branch in cloud)
+
+## Move Branch
+
+\`git checkout "target branch"\`
+
+## Update Branch
+
+**Scenario:**
+
+dev branch is based on old main. When main updates, dev wants to update with main's code but doesn't want to change what's modified in dev.
+
+\`\`\`mermaid
+gitGraph
+  commit id: "first commit"
+  branch dev
+  commit id: "new branch first"
+  commit id: "second commit"
+  checkout main
+  commit id: "second commit"
+  commit id: "second update commit"
+\`\`\`
+
+1. \`git checkout main\` # Switch branch
+2. \`git pull\`
+3. \`git checkout dev\`
+4. \`git merge main\`
+
+## Delete Branch
+
+\`git push origin --delete target branch\`
+
+## Delete Specific Commit
+
+1. \`git rebase -i HEAD~2\` # Show last two commits, number after ~ can be changed
+2. Change Pick to drop
+3. \`:wq\` Save
+4. \`git push origin branch_name --force\`
+
+## Revert to Specific Commit
+
+\`git reset <specific_commit>\`
+
+## Modify Github Repo Folder Name
+
+**General Case**
+
+\`git mv <old name> <new name>\`
+
+**Case where only case sensitivity needs modification**
+
+1. \`git mv <old name> <temp_name>\`
+2. \`git mv <temp_name> <new name>\`
+
+Since Windows environment is case-insensitive for file systems, but Git is case-sensitive, direct modification is not possible.
+      `,
+      jp: `
+# Git メモ
+
+このメモは、私が仕事やプロジェクトで踏んだ地雷に基づいています。随時更新されます。
+
+## 新しいブランチの作成
+
+- \`git checkout -b name\` # ローカルブランチを作成して切り替える
+- \`git push origin name\` # ローカルブランチをクラウドにアップロード（クラウドで新しいブランチを作成）
+
+## ブランチの移動
+
+\`git checkout "target branch"\`
+
+## ブランチの更新
+
+**シナリオ:**
+
+devブランチは古いmainに基づいています。mainが更新されたとき、devもmainの更新されたコードを取り込みたいが、devでの変更は変更したくない場合。
+
+\`\`\`mermaid
+gitGraph
+  commit id: "first commit"
+  branch dev
+  commit id: "new branch first"
+  commit id: "second commit"
+  checkout main
+  commit id: "second commit"
+  commit id: "second update commit"
+\`\`\`
+
+1. \`git checkout main\` # ブランチを切り替える
+2. \`git pull\`
+3. \`git checkout dev\`
+4. \`git merge main\`
+
+## ブランチの削除
+
+\`git push origin --delete target branch\`
+
+## 特定のコミットの削除
+
+1. \`git rebase -i HEAD~2\` # 前の2つのコミットを表示、~の後の数字は変更可能
+2. Pickをdropに変更
+3. \`:wq\` 保存
+4. \`git push origin branch_name --force\`
+
+## 特定のコミットに戻す
+
+\`git reset <specific_commit>\`
+
+## Githubリポジトリのフォルダ名を変更する
+
+**一般的な場合**
+
+\`git mv <old name> <new name>\`
+
+**大文字小文字のみを変更する必要がある場合**
+
+1. \`git mv <old name> <temp_name>\`
+2. \`git mv <temp_name> <new name>\`
+
+Windows環境はファイルシステムの大文字小文字を区別しませんが、Gitは区別するため、直接変更することはできません。
+      `,
+    },
+    date: '2025-12-02',
+    readTime: 5,
+    category: {
+      zh: '開發',
+      en: 'Development',
+      jp: '開発',
+    },
+    tags: ['git', 'github', '分享', '開發'],
+    author: 'Kakeru',
+  },
+
 ];
 
 // 取得所有文章
@@ -210,7 +586,7 @@ export function getPostById(id: string): BlogPost | undefined {
 
 // 根據分類取得文章
 export function getPostsByCategory(category: string): BlogPost[] {
-  return posts.filter(post => 
+  return posts.filter(post =>
     post.category.zh === category || post.category.en === category
   );
 }

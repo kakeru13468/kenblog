@@ -10,10 +10,10 @@ export function BlogPost() {
   const { t, i18n } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const lang = i18n.language.startsWith('zh') ? 'zh' : 'en';
-  
+  const lang = i18n.language.startsWith('zh') ? 'zh' : i18n.language.startsWith('ja') ? 'jp' : 'en';
+
   const post = id ? getPostById(id) : undefined;
-  
+
   if (!post) {
     return (
       <div className="max-w-4xl mx-auto px-6 py-12">
@@ -39,7 +39,7 @@ export function BlogPost() {
       </div>
     );
   }
-  
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString(lang === 'zh' ? 'zh-TW' : 'en-US', {

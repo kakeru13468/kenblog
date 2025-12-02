@@ -9,7 +9,7 @@ import { addSubscriber } from '../../data/subscribers';
 export function Blog() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const lang = i18n.language.startsWith('zh') ? 'zh' : 'en';
+  const lang = i18n.language.startsWith('zh') ? 'zh' : i18n.language.startsWith('ja') ? 'jp' : 'en';
   const posts = getAllPosts();
 
   const [email, setEmail] = useState('');
@@ -68,8 +68,8 @@ export function Blog() {
             transition={{ delay: index * 0.1 }}
             onClick={() => navigate(`/blog/${post.id}`)}
             className={`${index === 0
-                ? 'col-span-12 md:col-span-8 row-span-1'
-                : 'col-span-12 md:col-span-4 row-span-1'
+              ? 'col-span-12 md:col-span-8 row-span-1'
+              : 'col-span-12 md:col-span-4 row-span-1'
               } bg-white dark:bg-neutral-900 border border-cyan-200 dark:border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-600 dark:hover:border-cyan-400 cursor-pointer group`}
           >
             <div className="flex items-center gap-3 mb-4">

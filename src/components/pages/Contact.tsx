@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import emailjs from '@emailjs/browser';
 import { Mail, MapPin, Phone, Send, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -13,10 +14,44 @@ export function Contact() {
   });
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    if (!formData.name || !formData.email || !formData.message) return;
+
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      // EmailJS credentials from environment variables
+      const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        PUBLIC_KEY
+      );
+
+      console.log('Email sent successfully');
+      setFormData({ name: '', email: '', message: '' });
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 3000);
+    } catch (err) {
+      console.error('Failed to send email:', err);
+      setError(lang === 'zh' ? '發送失敗，請稍後再試。' : 'Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleCopy = async (text: string, field: string) => {
@@ -115,7 +150,7 @@ export function Contact() {
           <h3 className="text-white mb-6">
             {t('contact.form.title')}
           </h3>
-          
+
           <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="name" className="block text-cyan-100 dark:text-cyan-50 mb-2">
@@ -162,11 +197,15 @@ export function Contact() {
             <div className="md:col-span-2">
               <button
                 type="submit"
-                className="w-full md:w-auto bg-white text-cyan-600 px-8 py-3 rounded-xl hover:bg-cyan-50 flex items-center justify-center gap-2 cursor-pointer"
+                disabled={isSubmitting}
+                className="w-full md:w-auto bg-white text-cyan-600 px-8 py-3 rounded-xl hover:bg-cyan-50 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {t('contact.form.submit')}
-                <Send className="w-4 h-4" />
+                {isSubmitting ? (lang === 'zh' ? '傳送中...' : 'Sending...') : t('contact.form.submit')}
+                {!isSubmitting && <Send className="w-4 h-4" />}
               </button>
+              {error && (
+                <p className="mt-2 text-red-300 text-sm">{error}</p>
+              )}
             </div>
           </form>
         </motion.div>
@@ -182,6 +221,19 @@ export function Contact() {
         >
           <Check className="w-4 h-4 text-emerald-500" />
           {lang === 'zh' ? '已複製到剪貼簿' : 'Copied to clipboard'}
+        </motion.div>
+      )}
+
+      {/* Success Toast */}
+      {showSuccess && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          className="fixed bottom-6 right-6 bg-emerald-500 text-white px-6 py-3 rounded-xl shadow-lg flex items-center gap-2"
+        >
+          <Check className="w-5 h-5" />
+          {lang === 'zh' ? '訊息已發送！' : 'Message Sent!'}
         </motion.div>
       )}
     </div>
