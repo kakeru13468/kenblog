@@ -7,6 +7,7 @@ import { About } from './components/pages/About';
 import { Projects } from './components/pages/Projects';
 import { ProjectDetail } from './components/pages/ProjectDetail';
 import { Services } from './components/pages/Services';
+import { WebDevelopment } from './components/pages/WebDevelopment';
 import { Contact } from './components/pages/Contact';
 import { Blog } from './components/pages/Blog';
 import { BlogPost } from './components/pages/BlogPost';
@@ -66,6 +67,7 @@ function AppContent() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/web-development" element={<WebDevelopment />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />

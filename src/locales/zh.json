@@ -4,6 +4,8 @@
     "about": "關於我",
     "projects": "專案",
     "services": "服務",
+    "services.webDev": "網頁建置",
+    "services.animation": "網頁效果服務",
     "contact": "聯絡我",
     "blog": "部落格"
   },
@@ -105,17 +107,121 @@
       }
     }
   },
-  "services": {
-    "title": "服務項目",
-    "webDev": {
-      "title": "網頁開發",
-      "desc": "使用現代技術打造的客製化網站與應用程式",
-      "features": ["React & Next.js", "RWD 響應式設計"]
+  "webDev": {
+    "hero": {
+      "title": "網頁建置服務",
+      "description": "使用現代技術打造專業、高效能且用戶友好的網站與應用程式",
+      "cta": "立即諮詢"
     },
-    "uiux": {
-      "title": "技術諮詢",
-      "desc": "討論最適合您的工具或是方向",
-      "features": ["使用者研究", "設計系統"]
+    "services": {
+      "responsive": {
+        "title": "響應式設計",
+        "desc": "確保您的網站在所有裝置上都能完美呈現",
+        "features": ["手機、平板、桌面適配", "流暢的使用體驗", "SEO 優化"]
+      },
+      "modern": {
+        "title": "現代技術棧",
+        "desc": "使用最新的前端技術打造高性能網站",
+        "features": ["React.js", "TypeScript","JavaScript", "Tailwind CSS"]
+      },
+      "performance": {
+        "title": "效能優化",
+        "desc": "確保網站載入速度快、運行流暢",
+        "features": ["程式碼優化", "圖片壓縮", "CDN 整合"]
+      },
+      "security": {
+        "title": "安全性",
+        "desc": "保護您的網站和用戶數據安全",
+        "features": ["HTTPS 加密", "數據保護", "安全認證"]
+      },
+      "custom": {
+        "title": "客製化開發",
+        "desc": "根據您的需求打造獨特的網站功能",
+        "features": ["個性化設計", "功能定制", "持續維護"]
+      }
+    },
+    "process": {
+      "title": "開發流程",
+      "step1": {
+        "title": "需求分析",
+        "desc": "深入了解您的業務需求和目標"
+      },
+      "step2": {
+        "title": "設計規劃",
+        "desc": "創建視覺設計和技術架構方案"
+      },
+      "step3": {
+        "title": "開發實作",
+        "desc": "使用最佳實踐進行開發和測試"
+      },
+      "step4": {
+        "title": "部署上線",
+        "desc": "部署到生產環境並提供後續支援"
+      }
+    },
+    "cta": {
+      "title": "準備好開始您的專案了嗎？",
+      "desc": "讓我們一起打造一個專業、現代且高效的網站，幫助您的業務在數位世界中脫穎而出。",
+      "button": "聯絡我"
+    }
+  },
+  "services": {
+    "title": "動畫效果展示",
+    "subtitle": "探索網站上使用的動畫效果",
+    "filters": {
+      "all": "全部",
+      "fundamentals": "基礎動畫",
+      "loading": "載入動畫",
+      "interactions": "互動動畫",
+      "svg": "SVG 動畫",
+      "scroll": "滾動動畫"
+    },
+    "examples": {
+      "fadeIn": {
+        "title": "淡入 / 滑入",
+        "desc": "頁面元素進入時的淡入和向上滑動效果",
+        "usage": "用於頁面進入動畫"
+      },
+      "stagger": {
+        "title": "交錯動畫",
+        "desc": "列表項目依序出現的動畫效果",
+        "usage": "用於列表和網格布局"
+      },
+      "hoverScale": {
+        "title": "懸停縮放",
+        "desc": "滑鼠懸停時的縮放效果",
+        "usage": "用於卡片和按鈕互動"
+      },
+      "layoutAnimation": {
+        "title": "布局動畫",
+        "desc": "元素位置改變時的平滑過渡",
+        "usage": "用於導航選項卡切換"
+      },
+      "pathMorphing": {
+        "title": "路徑變形",
+        "desc": "SVG 路徑的動態變形效果",
+        "usage": "用於載入動畫的波浪效果"
+      },
+      "floatingBubbles": {
+        "title": "深色/淺色模式切換",
+        "desc": "深色和淺色主題之間的平滑切換動畫",
+        "usage": "用於主題切換按鈕"
+      },
+      "colorInterpolation": {
+        "title": "導航欄樣式",
+        "desc": "帶有背景模糊和活動標籤動畫的導航欄",
+        "usage": "用於網站頂部導航欄"
+      },
+      "animatePresence": {
+        "title": "下拉式選單",
+        "desc": "使用 AnimatePresence 實現的下拉選單動畫效果",
+        "usage": "用於導航欄和表單的下拉選單"
+      },
+      "cardHover": {
+        "title": "卡片懸停效果",
+        "desc": "卡片懸停時的背景和顏色變化",
+        "usage": "用於專案卡片互動"
+      }
     },
     "cta": {
       "title": "準備好開始您的專案了嗎？",

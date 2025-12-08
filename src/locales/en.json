@@ -4,6 +4,8 @@
     "about": "About Me",
     "projects": "Projects",
     "services": "Services",
+    "services.webDev": "Web Development",
+    "services.animation": "Animation Services",
     "contact": "Contact Me",
     "blog": "Blog"
   },
@@ -104,27 +106,126 @@
       }
     }
   },
+  "webDev": {
+    "hero": {
+      "title": "Web Development Services",
+      "description": "Build professional, high-performance, and user-friendly websites and applications with modern technologies",
+      "cta": "Get Started"
+    },
+    "services": {
+      "responsive": {
+        "title": "Responsive Design",
+        "desc": "Ensure your website looks perfect on all devices",
+        "features": ["Mobile, tablet, desktop adaptation", "Smooth user experience", "SEO optimization"]
+      },
+      "modern": {
+        "title": "Modern Tech Stack",
+        "desc": "Build high-performance websites with the latest frontend technologies",
+        "features": ["React & Next.js", "TypeScript", "Tailwind CSS"]
+      },
+      "mobile": {
+        "title": "Mobile First",
+        "desc": "Design and development optimized for mobile devices",
+        "features": ["PWA support", "Touch optimization", "Fast loading"]
+      },
+      "performance": {
+        "title": "Performance Optimization",
+        "desc": "Ensure fast loading and smooth operation",
+        "features": ["Code optimization", "Image compression", "CDN integration"]
+      },
+      "security": {
+        "title": "Security",
+        "desc": "Protect your website and user data",
+        "features": ["HTTPS encryption", "Data protection", "Security authentication"]
+      },
+      "custom": {
+        "title": "Custom Development",
+        "desc": "Build unique website features based on your needs",
+        "features": ["Personalized design", "Feature customization", "Ongoing maintenance"]
+      }
+    },
+    "process": {
+      "title": "Development Process",
+      "step1": {
+        "title": "Requirements Analysis",
+        "desc": "Deep understanding of your business needs and goals"
+      },
+      "step2": {
+        "title": "Design Planning",
+        "desc": "Create visual design and technical architecture"
+      },
+      "step3": {
+        "title": "Development",
+        "desc": "Develop and test using best practices"
+      },
+      "step4": {
+        "title": "Deployment",
+        "desc": "Deploy to production and provide ongoing support"
+      }
+    },
+    "cta": {
+      "title": "Ready to start your project?",
+      "desc": "Let's build a professional, modern, and efficient website together to help your business stand out in the digital world.",
+      "button": "Contact Me"
+    }
+  },
   "services": {
-    "title": "Services",
-    "webDev": {
-      "title": "Web Development",
-      "desc": "Custom websites and web applications built with modern technologies",
-      "features": ["React & Next.js", "Responsive Design", "Performance Optimization"]
+    "title": "Animation Showcase",
+    "subtitle": "Explore animation effects used on this website",
+    "filters": {
+      "all": "All",
+      "fundamentals": "Fundamentals",
+      "loading": "Loading",
+      "interactions": "Interactions",
+      "svg": "SVG Animations",
+      "scroll": "Scroll Animations"
     },
-    "uiux": {
-      "title": "UI/UX Design",
-      "desc": "User-centered design that combines aesthetics with functionality",
-      "features": ["User Research", "Prototyping", "Design Systems"]
-    },
-    "mobile": {
-      "title": "Mobile Development",
-      "desc": "Native and cross-platform mobile applications",
-      "features": ["iOS & Android", "React Native", "App Store Launch"]
-    },
-    "branding": {
-      "title": "Branding",
-      "desc": "Complete brand identity and visual design services",
-      "features": ["Logo Design", "Brand Guidelines", "Marketing Materials"]
+    "examples": {
+      "fadeIn": {
+        "title": "Fade In / Slide Up",
+        "desc": "Fade in and slide up effect when page elements enter",
+        "usage": "Used for page entry animations"
+      },
+      "stagger": {
+        "title": "Stagger Animation",
+        "desc": "Sequential appearance animation for list items",
+        "usage": "Used for lists and grid layouts"
+      },
+      "hoverScale": {
+        "title": "Hover Scale",
+        "desc": "Scale effect on mouse hover",
+        "usage": "Used for card and button interactions"
+      },
+      "layoutAnimation": {
+        "title": "Layout Animation",
+        "desc": "Smooth transition when element position changes",
+        "usage": "Used for navigation tab switching"
+      },
+      "pathMorphing": {
+        "title": "Path Morphing",
+        "desc": "Dynamic path morphing effect for SVG",
+        "usage": "Used for wave effects in loading animation"
+      },
+      "floatingBubbles": {
+        "title": "Dark/Light Mode Toggle",
+        "desc": "Smooth transition animation between dark and light themes",
+        "usage": "Used for theme toggle button"
+      },
+      "colorInterpolation": {
+        "title": "Navigation Bar Style",
+        "desc": "Navigation bar with backdrop blur and active tab animation",
+        "usage": "Used for website top navigation bar"
+      },
+      "animatePresence": {
+        "title": "Dropdown Menu",
+        "desc": "Dropdown menu animation using AnimatePresence",
+        "usage": "Used for navigation and form dropdowns"
+      },
+      "cardHover": {
+        "title": "Card Hover Effect",
+        "desc": "Background and color change on card hover",
+        "usage": "Used for project card interactions"
+      }
     },
     "cta": {
       "title": "Ready to start your project?",
